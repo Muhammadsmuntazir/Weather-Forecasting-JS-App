@@ -1,0 +1,160 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+.container {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+input {
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#getWeather {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    width: 90%;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body {
+    background: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    background: #eee;
+}
+
+.container {
+    width: 20vw;
+    height: 60vh;
+    border-radius: 5% 15% 5% 15%;
+    box-shadow: 0 2px 30px rgba(rgb(0, 0, 0), 0.4);
+    background: darken(#eff3f9, 20%);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    min-width: 200px;
+    min-height: 350px;
+}
+
+.wave {
+    opacity: 0.8;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: #007BFF;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+
+}
+
+.wave.-three {
+    animation: drift 5000ms infinite linear;
+    ;
+    opacity: 0.2;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    ;
+}
+
+.container:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media (max-height: 500px) {
+    .container {
+        height: 80vh;
+    }
+
+    .wave {
+        top: 115%;
+    }
+}
+
+body>span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+}
+
+.weathercontainer {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    height: 45%;
+    z-index: 4;
+}
+
+.row1 {
+    margin-top: 35px;
+}
+img{
+    width: 50px;
+    height: auto;
+}
+.row1,.row2,.row3{
+    color: white;
+}
